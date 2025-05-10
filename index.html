@@ -1,25 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para Você, Mamãe</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-  
+  <title>Homenagem à Mamãe</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #ffccd5;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .intro {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 600px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .button {
+      margin-top: 2rem;
+    }
+    .button a {
+      padding: 1rem 2rem;
+      background-color: #ff758f;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+    .button a:hover {
+      background-color: #ff4f70;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- TELA DE BOAS-VINDAS -->
-  <div id="intro">
-    <h1>Para Você, Mamãe ❤️</h1>
-    <p>Fazendo alterações de teste</p>
-    <p>Uma homenagem com todo meu amor.</p>
-    <button id="entrarBtn">Entrar na Homenagem</button>
-    <p><a href="./pag2.html">Começar</a></p>
-  </div>
+  <header>
+    <h1>Para a Melhor Mãe do Mundo</h1>
+  </header>
 
-  <script src="script.js"></script>
+  <section class="intro">
+    <p>Mãe, esta é uma pequena homenagem para expressar o quanto você é importante em minha vida. Cada lembrança, cada sorriso, cada abraço seu ficou eternizado em meu coração.</p>
+
+    <div class="gallery">
+      <img src="fotos/IMG-20200711-WA0228.jpg" alt="Foto 1 com minha mãe">
+      <!-- Adicione mais fotos conforme quiser -->
+    </div>
+
+    <div class="button">
+      <a href="homenagem.html">Ver Homenagem</a>
+    </div>
+  </section>
+
 </body>
 </html>
-

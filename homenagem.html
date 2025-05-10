@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <title>Homenagem do Dia das Mães</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f6;
+      margin: 0;
+      padding: 0;
+      color: #444;
+      text-align: center;
+    }
+    header {
+      background-color: #ffc9de;
+      padding: 1.5rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .content {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    #startMusicBtn {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background-color: #ff6584;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .button {
+      margin-top: 2rem;
+    }
+    .button a {
+      padding: 1rem 2rem;
+      background-color: #ff6584;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Com Todo Meu Amor</h1>
+  </header>
+
+  <section class="content">
+    <p>
+      Mãe, não existem palavras suficientes para descrever o amor que sinto por você. 
+      Obrigado por cada sacrifício, cada gesto de carinho e cada ensinamento. 
+      Você é minha inspiração e meu maior tesouro.
+    </p>
+
+    <!-- Player de áudio oculto -->
+    <audio id="musica" autoplay loop>
+      <source src="musica/Mãe_Rick_Renner.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+
+    <!-- Botão alternativo para iniciar música caso o autoplay seja bloqueado -->
+    <button id="startMusicBtn">Iniciar Música</button>
+
+    <div class="gallery">
+      <img src="foto4.jpg" alt="Foto extra 1">
+      <img src="foto5.jpg" alt="Foto extra 2">
+      <img src="foto6.jpg" alt="Foto extra 3">
+    </div>
+
+    <div class="button">
+      <a href="index.html">Voltar ao Início</a>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', function () {
+      const audio = document.getElementById('musica');
+      const btn = document.getElementById('startMusicBtn');
+
+      audio.play().catch(() => {
+        // Se o navegador bloquear o autoplay, exibe o botão para tocar manualmente
+        btn.style.display = 'inline-block';
+        btn.addEventListener('click', function () {
+          audio.play();
+          btn.style.display = 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
