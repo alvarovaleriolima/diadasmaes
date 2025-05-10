@@ -7,73 +7,101 @@
   <title>Homenagem à Mamãe</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff8f0;
-      color: #333;
-      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f6;
+      color: #444;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
     header {
-      background-color: #ffccd5;
+      background-color: #ff6584;
       padding: 2rem 1rem;
+      text-align: center;
+      color: white;
     }
-    h1 {
+
+    header h1 {
       font-size: 2.5rem;
       margin: 0;
     }
-    .intro {
-      padding: 2rem;
-      max-width: 800px;
+
+    .container {
+      flex: 1;
+      padding: 2rem 1rem;
+      max-width: 1000px;
       margin: auto;
-    }
-    .gallery {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .gallery img {
-      width: 600px;
+
+    .container p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .container img {
+      max-width: 100%;
       height: auto;
-      border-radius: 12px;
+      margin: 1rem 0;
+      border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .button {
-      margin-top: 2rem;
-    }
-    .button a {
+
+    .botao {
       padding: 1rem 2rem;
-      background-color: #ff758f;
+      background-color: #ff6584;
       color: white;
-      text-decoration: none;
+      border: none;
       border-radius: 8px;
-      font-size: 1.2rem;
-      transition: background-color 0.3s;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
-    .button a:hover {
-      background-color: #ff4f70;
+
+    .botao:hover {
+      background-color: #e64e70;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container p {
+        font-size: 1rem;
+      }
+
+      .botao {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Para a Melhor Mãe do Mundo</h1>
+    <h1>Feliz Dia das Mães!</h1>
   </header>
 
-  <section class="intro">
-    <p>Mamãe querida, esta é uma pequena homenagem para expressar o quanto você é importante em minha vida. Cada lembrança, cada sorriso, cada abraço seu ficou eternizado em meu coração.</p>
+  <main class="container">
+    <p>
+      Neste dia especial, quero homenagear a mulher mais importante da minha vida.
+      Mãe, você é sinônimo de amor, força e dedicação. Preparei algo muito especial para você!
+    </p>
 
-    <div class="gallery">
-      <img src="fotos/IMG-20200711-WA0228.jpg" alt="Foto 1 com minha mãe">
-      <!-- Adicione mais fotos conforme quiser -->
-    </div>
+    <img src="fotos/IMG-20200711-WA0228.jpg" alt="Foto com minha mãe" />
 
-    <div class="button">
-      <a href="homenagem.html">Ver Homenagem</a>
-    </div>
-  </section>
+    <a href="homenagem.html" class="botao">Ver Homenagem</a>
+  </main>
 
 </body>
 </html>
+
